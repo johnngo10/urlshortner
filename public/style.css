@@ -2,9 +2,17 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #222;
-  background-color: #fff;
+  background-color: #5ac18e;
   text-align: center;
   line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+
+  margin: 0;
 }
 
 main {
@@ -12,11 +20,10 @@ main {
   margin-top: 40px;
 }
 
-h3 {
-  margin-top: 30px;
+h1 {
+  color: white;
+  font-size: 40px;
 }
-
-
 
 .user-stories li {
   margin-bottom: 1em;
@@ -29,7 +36,19 @@ a {
 form {
   margin: 10px auto;
   padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
+}
+
+.submit {
+  background-color: #065535;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #096a43;
 }
 
 label {
@@ -37,10 +56,19 @@ label {
 }
 
 input {
-  padding: 5px;
+  padding: 9.5px;
+  font-size: 20px;
+  border: none;
+  outline: none;
 }
 
 input[type='text'] {
-  width: 220px;
-  text-align: center;
+  width: 500px;
+}
+
+.info {
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  background-color: #b4eeb4;
 }

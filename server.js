@@ -23,11 +23,6 @@ app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-// Your first API endpoint
-app.get('/api/hello', function (req, res) {
-  res.json({ greeting: 'hello API' });
-});
-
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/api/shorturl/new', function (req, res) {
@@ -62,7 +57,7 @@ app.post('/api/shorturl/new', function (req, res) {
 app.get('/api/shorturl/:short_url', function (req, res) {
   const shortUrl = req.params.short_url;
 
-  const findShortUrl = Url.findOne({ hash: shortUrl }, function (err, data) {
+  Url.findOne({ hash: shortUrl }, function (err, data) {
     if (!data) {
       res.json({
         error: 'No short URL found',

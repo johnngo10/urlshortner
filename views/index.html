@@ -2,12 +2,7 @@
 
 <html>
   <head>
-    <title>URL Shortener Microservice | freeCodeCamp.org</title>
-    <link
-      rel="icon" 
-      type="image/png" 
-      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
-    />
+    <title>URL Shortener Microservice</title>
     <link href="/public/style.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -16,24 +11,26 @@
     <main>
       <section>
         <form action="api/shorturl/new" method="POST">
-          <fieldset>
-            <legend>URL Shortener</legend>
-            <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
-            <input type="submit" value="POST URL" />
-          </fieldset>
+          <input
+            id="url_input"
+            type="text"
+            name="url"
+            placeholder="https://developer.mozilla.org/en-US/"
+          />
+          <input type="submit" value="Shorten" class="submit" />
         </form>
       </section>
-      <div>
+      <div class="info">
         <p>Usage:</p>
         <p>[app_url]/api/shorturl/[short_url]</p>
         <p>Example:</p>
-        <a href="https://urlshortner-xuan.herokuapp.com/api/shorturl/H94Upmp6Nw">urlshortner-xuan.herokuapp.com/api/shorturl/H94Upmp6Nw</a>
+        <a href="https://urlshortner-xuan.herokuapp.com/api/shorturl/fWdEebRSgq"
+          >urlshortner-xuan.herokuapp.com/api/shorturl/fWdEebRSgq</a
+        >
         <p>Redirects To:</p>
-        <p>https://www.freecodecamp.org</p>
+        <p>https://developer.mozilla.org/en-US/</p>
       </div>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
   </body>
 </html>
